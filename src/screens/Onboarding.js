@@ -1,10 +1,20 @@
 
 import React, {useState} from 'react';
-
-import {SafeAreaView,StyleSheet,View,Text,Image,Button,} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  Button,
+} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
-import Login from './src/screens/Login';
-const App = () => {
+//  import Login from '../screens/Login';
+import MainLogin from '../screens/MainLogin';
+ 
+
+
+const Onboarding = () => {
   const [showRealApp, setShowRealApp] = useState(false);
 
   const onDone = () => {
@@ -42,13 +52,15 @@ const App = () => {
       {showRealApp ? (
         <SafeAreaView style={styles.container}>
           <View style={styles.container}>
-         <Login />
+           <MainLogin />
             
+        
           </View>
         </SafeAreaView>
       ) : (
         <AppIntroSlider
           data={slides}
+         
           renderItem={RenderItem}
           onDone={onDone}
           showSkipButton={true}
@@ -59,7 +71,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default Onboarding;
 
 const styles = StyleSheet.create({
   container: {
@@ -120,7 +132,7 @@ const slides = [
       uri:
         'https://techmind.s3.ap-south-1.amazonaws.com/22.jpg',
     },
-    backgroundColor: '#0ae6fa',
+    backgroundColor: '#FF33FE',
   },
   {
     key: 's3',
