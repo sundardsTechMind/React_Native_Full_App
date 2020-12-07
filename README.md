@@ -8,7 +8,9 @@ How to install & Run
 
 3. if your on windows Run( npm install).
 
-4.if your on mac Run(yar install).
+4.if your on mac Run (yarn install).
+
+5. Go to ios folder run (pod install)
 
 finally run the project
 
